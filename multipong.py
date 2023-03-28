@@ -48,13 +48,9 @@ class Firkant:
         self.rect = pg.Rect(self.x, self.y, self.radius * 2, self.radius * 2)
         self.game_over = 0
         
-    
-    def opprett(self):
-        for i in range(10):
-            firkant_liste.append((vindu, rosa, self.rect))
-            
+
     def tegn(self):
-        print(firkant_liste)
+        pg.draw.rect(vindu, morkeblaa, self.rect)
         
     def flytt(self):
         kollisjon_tolleranse = 5
@@ -80,7 +76,6 @@ class Firkant:
 
 plattform = Plattform()
 firkant = Firkant()
-firkant.opprett()
 
 def tegn_vindu():
     vindu.fill(farge)
